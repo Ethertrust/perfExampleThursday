@@ -1,4 +1,4 @@
-import gs
+import gs2
 import mdb
 import pandas
 from datetime import datetime as dt
@@ -7,7 +7,7 @@ from google.oauth2 import service_account
 
 
 def getxlsnames():
-    fiolist = gs.read('13UIj4U0ry16Ib5W6dWMrtCpNyv-5TW5hUMzIJlkIFb4', 'b Performance')
+    fiolist = gs2.read('13UIj4U0ry16Ib5W6dWMrtCpNyv-5TW5hUMzIJlkIFb4', 'b Performance')
     return [val for val in fiolist]
 
 
@@ -122,5 +122,5 @@ if __name__ == '__main__':
     names = getxlsnames()
     # print(names)
     newdata = performance(data, names)
-    gs.write(newdata, '13UIj4U0ry16Ib5W6dWMrtCpNyv-5TW5hUMzIJlkIFb4', 'b Performance')
-    # print(data)
+    #gs.write(newdata, '13UIj4U0ry16Ib5W6dWMrtCpNyv-5TW5hUMzIJlkIFb4', 'b Performance')
+    print(newdata)
